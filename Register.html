@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="CSS/all.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+  
+  
+
+<section id="signIn">
+  <div class="container">
+  <div class=" text-center d-flex justify-content-center mt-5">
+    <div class="w-75  px-5 py-5 box-color">
+      <p class="fa-3x">Smart Login System</p>
+      <form action="">
+        <input type="text" id="name" class="form-control mb-4" onkeyup="isValidName()" placeholder="Enter your name">
+        <input type="email" id="email" class="form-control" onkeyup="isValidEmail()" placeholder="Enter your email">
+      <input type="password" id="password" class="form-control my-4" onkeyup="isValidPassword()" placeholder="Enter your password">
+      <button onclick="register()" type="button" class="btn btn-outline-primary w-100">Sign Up</button>
+
+      <p class="pt-3 text-white">You have an account? <a class="text-white text-decoration-none" href="./index.html">SignIn</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- The modal -->
+<div id="myModal" class="modal pt-5">
+
+  <div class="d-flex justify-content-center pt-5 w-50 m-auto align-items-center h-50">
+
+    <div class="modal-body bg-white p-5 rounded mb-5 ggg modal-lg m-auto" id="modal">
+      <div class="pb-4 d-flex">
+        <div class="item bg-danger"></div>
+        <div class="item bg-warning"></div>
+        <div class="item bg-success"></div>
+
+      </div>
+      <h2 class="fs-5">Name & Email & Password must not empty , Please follow the rules below : </h2>
+      <p><i class="fa-regular fa-circle-right text-danger"></i> Name must be between 3 to 10 chars</p>
+      <p><i class="fa-regular fa-circle-right text-danger"></i> Email must be a valid one</p>
+      <p><i class="fa-regular fa-circle-right text-danger"></i> your password at least 8 characters & Must contain at least one uppercase letter & one lowercase letter &Must contain at least one digit & Can contain special characters. </p>
+
+    </div>
+  </div>
+</div>
+    <script src="./JS/main.js"></script>
+
+    <body>
+
+    </body>
+
+</html>
