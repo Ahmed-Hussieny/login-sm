@@ -39,7 +39,11 @@
     <script src="./JS/main.js"></script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", app1);
+      document.addEventListener("DOMContentLoaded", app);
+
+      function app(){
+    USERNAME.innerHTML+= " "+ localStorage.getItem('mainName');
+}
     </script>
   
 

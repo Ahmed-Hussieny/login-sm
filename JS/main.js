@@ -81,9 +81,7 @@ window.addEventListener("click", function (event) {
     // app1();
 }
 console.log(ind);
-function app1(){
-    USERNAME.innerHTML+= " "+ localStorage.getItem('mainName');
-}
+
 
 
 
