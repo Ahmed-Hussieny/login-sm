@@ -22,6 +22,7 @@ var nameeee ="";
 if (localStorage.getItem("users") != null) {
     users = JSON.parse(localStorage.getItem("users"));
 }
+var ind = 0;
 
 function register(){
     if(nameIn.value.length !== 0 && emailIN.value.length !== 0 &&  passwordIN.value.length !== 0){
@@ -33,11 +34,15 @@ function register(){
             password : passwordIN.value,
         }
         users.push(user);
-        nameeee = nameIn.value;
         localStorage.setItem("users",JSON.stringify(users));
         
-        window.location.href = 'home.html';
-        setName();
+        // 
+        localStorage.setItem('mainName',user.userName);
+            window.location.href = 'home.html';
+           
+        // localStorage.setItem('mainName',users[i].userName);
+        // window.location.href = 'home.html';
+        // localStorage.setItem('mainName',users[i].userName);
     }else{
         // modal.style.display = "block";
         // console.log("exist")
@@ -56,6 +61,8 @@ else{
     modal.style.display = "block";
 }
 
+
+
 window.addEventListener("click", function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
@@ -71,7 +78,14 @@ window.addEventListener("click", function (event) {
 
     // console.log(arrUser);
     // console.log(users);
+    // app1();
 }
+console.log(ind);
+function app1(){
+    USERNAME.innerHTML+= " "+ localStorage.getItem('mainName');
+}
+
+
 
 function exixt(){
     var emailIN = document.getElementById('email');
@@ -135,12 +149,16 @@ function signIn(){
             for(let i = 0 ; i< users.length ;i++){
         if(users[i].email == emailIN.value && users[i].password == passwordIN.value){
             console.log("exixt");
-            nameeee=users[i].userName;
+            // nameeee=users[i].userName;
 
             
+
+            
+            localStorage.setItem('mainName',users[i].userName);
             window.location.href = 'home.html';
+            
             // console.log(user.value)
-            setName();
+            // setName();
             // console.log("fkdmk");
            
             
@@ -154,15 +172,11 @@ function signIn(){
     }else{
         modal.style.display = "block";
     }
+    // USERNAME.innerHTML+=users[ind];
     
 }
 
+
 function sinOut(){
     window.location.href = 'index.html';
-}
-function setName(){
-    const USERNAME = document.getElementById("PUTNAME");
-    const htmlContent = USERNAME.innerHTML;
-    htmlContent = "djfghjdfksl"
-    console.log(htmlContent);
 }

@@ -22,25 +22,29 @@
         <a class="navbar-brand text-white fw-bold" href="#">SMART LOGIN</a>
     </div>
     <div>
-      <button class="btn btn-outline-warning" onclick="sinOut()">logOut</button>
+      <button class="btn btn-outline-warning" onclick="sinOut(),app()">logOut</button>
     </div>
     </div>
     </nav>
 
 
-
     <section id="signIn" class="pt-5">
       <div class="container text-center d-flex justify-content-center pt-5 mt-5">
-        <div  id="PUTNAME" class="w-75  px-5 py-5 box-color">
-          <p class="fs-1">Welcome</p>
+        <div   class="w-75  px-5 py-5 box-color">
+          <p id="PUTNAME"  class="fs-1">Welcome</p>
         </div>
       </div>
     </section>
  
     <script src="./JS/main.js"></script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", app1);
+    </script>
   
 
     </body>
+
+
 
 </html>
